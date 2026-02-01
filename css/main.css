@@ -86,6 +86,11 @@ hr {}
     display: block;      /* removes tiny inline gaps */
     border-radius: 50%;
 }
+/* Research Interests list (under photo) */
+.col-xl-4 ul li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
 
 
 /* Footer */
