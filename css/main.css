@@ -22,10 +22,23 @@ hr {}
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar links */
-.navbar-nav .nav-link {
-    font-size: 1.1rem; /* reduced from large scale */
+/* Navbar brand (left: Emrul Hasan) */
+.navbar-brand {
+    font-size: 1.6rem;   /* increase name size */
+    font-weight: 600;
 }
+
+/* Navbar links (right: Home, Projects, etc.) */
+.navbar-nav .nav-link {
+    font-size: 1.2rem;   /* slightly larger than current 1.1rem */
+    font-weight: 500;
+}
+
+/* Spacing between menu items */
+.navbar-nav .nav-item {
+    margin-left: 12px;
+}
+
 
 /* Carousel */
 .carousel-inner img {}
