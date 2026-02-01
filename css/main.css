@@ -63,11 +63,13 @@ hr {}
 }
 
 /* Card photo styling */
-.photo {
-    padding: 20px;
+.photo img {
     width: 100%;
     height: auto;
+    display: block;      /* removes tiny inline gaps */
+    border-radius: 50%;
 }
+
 
 /* Footer */
 .social {
