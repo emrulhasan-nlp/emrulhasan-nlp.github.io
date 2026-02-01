@@ -60,7 +60,11 @@ hr {}
 .jumbotron {
     display: block;
     flex-direction: row-reverse;
+
+    margin-top: 0;        /* remove extra space above */
+    padding-top: 0.75rem; /* tighten gap after navbar */
 }
+
 
 /* 🔽 THIS IS THE KEY CHANGE 🔽 */
 .jumbotron .lead {
