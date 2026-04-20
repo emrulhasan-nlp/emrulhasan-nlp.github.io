@@ -1,95 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Emrul Hasan| Machine Learning, NLP & Recommender Systems</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Professional Portfolio: Emrul Hasan">
-    <meta name="keywords" content="data, data analyst, data engineer, software developer, resume, portfolio, personal website, Emrul Hasan, professional portfolio">
-    <meta name="author" content="Emrul Hasan">
-    <script src="js/main.js"></script>
-    <link rel="icon" type="image" href="img/icon.png" />
-    <!-- CSS-->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Emrul Hasan</title>
+  <meta name="description" content="Get in touch with Emrul Hasan — AI researcher at UBC & BC Cancer and Vector Institute.">
+  <link rel="icon" href="img/myphoto.JPG" type="image/jpeg">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .contact-info-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 2rem;
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .contact-info-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .ci-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: rgba(74,240,176,0.1);
+      display: flex; align-items:center; justify-content:center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .ci-label { font-size: 0.75rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--muted); margin-bottom:3px; }
+    .ci-value { font-size: 0.9rem; color: var(--text-dim); }
+    .ci-value a { color: var(--text-dim); text-decoration:none; transition:color 0.2s; }
+    .ci-value a:hover { color: var(--accent); }
+    .availability-dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: var(--accent);
+      margin-right: 6px; animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
 </head>
-<div class="container">
+<body>
 
-    <body>
-        <!-- Navigation Section -->
-        <div class="navigation">
-            <nav class="navbar navbar-expand-md navbar-light sticky-top">
-                <a class="navbar-brand" href="home.html">Emrul Hasan</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<nav>
+  <a href="index.html" class="nav-logo">Emrul Hasan</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#positions">Experience</a>
+    <a href="index.html#research">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
 
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="resume.html">Resume</a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="research.html">Research</a>
-                        </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="tableau.html">Tableau</a>
-                        </li>-->
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="articles.html">Articles</a>
-                        </li>-->
-                        <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact<span class="sr-only">(current)</span></a>
-                        </li>
-                </div>
-            </nav>
-        </div>
-        <!-- Contact Form -->
-        <br>
-        <div class="google_forms">
+<div class="page-wrapper">
 
+  <div class="page-header">
+    <div class="section-label">Reach Out</div>
+    <div class="section-title">Get in Touch</div>
+    <p>
+      <span class="availability-dot"></span>
+      Open to research collaborations, speaking engagements, and advisory roles in
+      agentic AI evaluation and clinical NLP.
+    </p>
+  </div>
 
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexRVw6gfppjvFJkRpPJh0WXqVXRA81DxOEPC54X0Th4rDrTg/viewform?embedded=true"
-                width="640" height="1029" frameborder="0" marginheight="0" marginwidth="0">Contact Me</iframe>
+  <section>
+    <div class="contact-grid">
 
-        </div>
-        <!-- Footer -->
-        <footer>
-            <div class="social">
-                <a href="emrul.phya@gmail.com" target="_blank">
-                    <i class="fa fa-envelope"></i>
-                </a>
-                <a href="https://github.com/emrulhasan-nlp" target="_blank">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/emrulphy/" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-                <!-- <a href="https://twitter.com/@aritralovesuall" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                </a> -->
+      <!-- Info column -->
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+        <div class="contact-info-card">
+
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-value"><a href="mailto:emrul.phy@gmail.com">emrul.phy@gmail.com</a></div>
+            </div>
+          </div>
 
-            <p class="footer">Copyright &copy; Emrul Hasan</p>
-        </footer>
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">LinkedIn</div>
+              <div class="ci-value"><a href="https://www.linkedin.com/in/emrulphy/" target="_blank">linkedin.com/in/emrulphy</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">GitHub</div>
+              <div class="ci-value"><a href="https://github.com/emrulhasan-nlp" target="_blank">github.com/emrulhasan-nlp</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Google Scholar</div>
+              <div class="ci-value"><a href="https://scholar.google.com/citations?user=ZZFYZT0AAAAJ&hl=en" target="_blank">View Publications</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Location</div>
+              <div class="ci-value">Vancouver, BC &amp; Toronto, ON — Canada</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1.5rem;">
+          <div class="section-label" style="margin-bottom:0.75rem;">Interested In</div>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="font-size:0.88rem; color:var(--text-dim); display:flex; align-items:center; gap:0.6rem;">
+              <span style="color:var(--accent);">→</span> Research collaborations in agentic AI &amp; clinical NLP
+            </div>
+            <div style="font-size:0.88rem; color:var(--text-dim); display:flex; align-items:center; gap:0.6rem;">
+              <span style="color:var(--accent);">→</span> Speaking &amp; panelist engagements
+            </div>
+            <div style="font-size:0.88rem; color:var(--text-dim); display:flex; align-items:center; gap:0.6rem;">
+              <span style="color:var(--accent);">→</span> Advisory roles for AI start-ups
+            </div>
+            <div style="font-size:0.88rem; color:var(--text-dim); display:flex; align-items:center; gap:0.6rem;">
+              <span style="color:var(--accent);">→</span> LLM evaluation &amp; agentic system design
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form column -->
+      <div>
+        <div class="contact-form-wrapper">
+          <div class="section-label" style="margin-bottom:1rem;">Send a Message</div>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSexRVw6gfppjvFJkRpPJh0WXqVXRA81DxOEPC54X0Th4rDrTg/viewform?embedded=true"
+            width="100%"
+            height="680"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            style="border-radius:8px; display:block;"
+            title="Contact Form">
+            Loading form…
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </div>
-</body>
 
+<footer>
+  <p>© 2026 Emrul Hasan &nbsp;·&nbsp;
+     <a href="mailto:emrul.phy@gmail.com">emrul.phy@gmail.com</a>
+  </p>
+</footer>
+
+</body>
 </html>
