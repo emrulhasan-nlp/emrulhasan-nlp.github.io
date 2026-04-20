@@ -119,6 +119,24 @@
     }
     .sidebar-link:hover { border-color: var(--accent); color: var(--accent); }
 
+    /* Aurora background */
+    .profile-aurora {
+      position: relative;
+      overflow: hidden;
+    }
+    .profile-aurora::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 40% at 15% 60%, rgba(74,240,176,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 45% 35% at 80% 20%, rgba(58,156,250,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 35% 30% at 60% 80%, rgba(255,122,92,0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .profile-aurora > * { position: relative; z-index: 1; }
+
     /* Responsive */
     @media(max-width:900px){
       .profile-section {
@@ -146,7 +164,7 @@
 </nav>
 
 <!-- ── PROFILE (above fold) ── -->
-<div style="padding-top:64px;" id="about">
+<div style="padding-top:64px;" id="about" class="profile-aurora">
   <div class="profile-section">
 
     <!-- LEFT: identity + bio + stats -->
@@ -205,11 +223,11 @@
       </div>
 
       <div class="profile-cta">
-        <a href="https://scholar.google.com/citations?user=ZZFYZT0AAAAJ&hl=en" target="_blank" class="btn btn-primary">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/emrulphy/" target="_blank" class="btn btn-primary">LinkedIn</a>
+        <a href="https://github.com/emrulhasan-nlp" target="_blank" class="btn btn-outline">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=ZZFYZT0AAAAJ&hl=en" target="_blank" class="btn btn-outline">Google Scholar</a>
         <a href="docs/EmrulHasan_Resume.pdf" target="_blank" class="btn btn-outline">CV</a>
         <a href="mailto:emrul.phy@gmail.com" class="btn btn-outline">Email</a>
-        <a href="https://www.linkedin.com/in/emrulphy/" target="_blank" class="btn btn-outline">LinkedIn</a>
-        <a href="https://github.com/emrulhasan-nlp" target="_blank" class="btn btn-outline">GitHub</a>
       </div>
     </div>
 
