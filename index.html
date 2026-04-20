@@ -4,220 +4,286 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emrul Hasan — Postdoctoral Research Fellow · AI Researcher</title>
-  <meta name="description" content="Emrul Hasan — Postdoctoral Research Fellow at UBC & BC Cancer. AI researcher specializing in agentic system evaluation, LLM reliability, and clinical NLP.">
+  <meta name="description" content="Emrul Hasan — Postdoctoral Research Fellow at UBC & BC Cancer. AI researcher specializing in agentic AI, RAG systems, recommendation, evaluation, and reliability.">
   <link rel="icon" href="img/myphoto.JPG" type="image/jpeg">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* ── Profile layout (hero replacement) ── */
+    .profile-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 3rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    /* Left: identity block + bio */
+    .profile-left {}
+
+    .profile-identity {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      margin-bottom: 1.6rem;
+    }
+    .profile-photo-sm {
+      width: 110px; height: 110px;
+      border-radius: 50%; flex-shrink: 0;
+      overflow: hidden;
+      border: 2px solid rgba(74,240,176,0.35);
+      box-shadow: 0 0 30px rgba(74,240,176,0.1);
+    }
+    .profile-photo-sm img { width:100%; height:100%; object-fit:cover; }
+
+    .profile-name-block {}
+    .profile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600; color: var(--text);
+      line-height: 1.1; margin-bottom: 0.35rem;
+    }
+    .profile-name span { color: var(--accent); }
+    .profile-title {
+      font-size: 0.88rem; color: var(--muted);
+      letter-spacing: 0.04em; line-height: 1.5;
+    }
+    .profile-title strong { color: var(--text-dim); font-weight: 500; }
+
+    .profile-headline {
+      font-size: 1rem; color: var(--text-dim);
+      line-height: 1.75; margin-bottom: 1.4rem;
+      max-width: 680px;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .profile-bio { font-size: 0.92rem; color: var(--muted); line-height: 1.8; max-width: 680px; }
+    .profile-bio p { margin-bottom: 0.9rem; }
+    .profile-bio strong { color: var(--text-dim); }
+
+    .profile-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem; margin: 1.6rem 0;
+    }
+    .pstat {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.9rem 1rem; text-align: center;
+      transition: border-color 0.2s;
+    }
+    .pstat:hover { border-color: rgba(74,240,176,0.25); }
+    .pstat-num { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--accent); }
+    .pstat-desc { font-size:0.72rem; color:var(--muted); margin-top:2px; line-height:1.3; }
+
+    .profile-cta { display:flex; gap:0.8rem; flex-wrap:wrap; }
+
+    /* Right: research interests sidebar */
+    .profile-right {}
+    .interests-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+      position: sticky; top: 90px;
+    }
+    .interests-label {
+      font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem;
+    }
+    .interest-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .interest-item:last-child { border-bottom: none; }
+    .interest-icon {
+      width: 32px; height: 32px; border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .interest-icon.teal  { background: rgba(74,240,176,0.1); }
+    .interest-icon.blue  { background: rgba(58,156,250,0.1); }
+    .interest-icon.coral { background: rgba(255,122,92,0.1); }
+    .interest-name { font-size: 0.88rem; color: var(--text); font-weight: 500; }
+    .interest-sub  { font-size: 0.75rem; color: var(--muted); margin-top: 1px; }
+
+    .sidebar-links {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin-top: 1.4rem;
+    }
+    .sidebar-link {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.78rem; color: var(--muted);
+      text-decoration: none; padding: 5px 10px;
+      border: 1px solid var(--border); border-radius: 5px;
+      background: var(--surface2); transition: all 0.2s;
+    }
+    .sidebar-link:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Responsive */
+    @media(max-width:900px){
+      .profile-section {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem 2.5rem;
+      }
+      .profile-stats { grid-template-columns: 1fr 1fr; }
+      .interests-card { position: static; }
+    }
+    @media(max-width:600px){
+      .profile-identity { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .profile-photo-sm { width: 90px; height: 90px; }
+      .profile-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">Emrul Hasan</a>
   <div class="nav-links">
     <a href="#about">About</a>
-    <a href="#positions">Experience</a>
     <a href="#research">Research</a>
     <a href="publications.html">Publications</a>
-    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-tag">Postdoctoral Research Fellow · Agentic AI Specialist</div>
-      <h1>Emrul <span>Hasan</span></h1>
-      <p class="hero-sub">
-        AI researcher specializing in the evaluation, reliability, and deployment of
-        agentic AI systems — building trustworthy AI for healthcare, clinical decision
-        support, and real-world applications.
-      </p>
-      <div class="hero-badges">
-        <span class="badge active">Agentic Systems Evaluation</span>
-        <span class="badge active">LLM Reliability</span>
-        <span class="badge">Clinical NLP</span>
-        <span class="badge">RAG Systems</span>
-        <span class="badge">Responsible AI</span>
-        <span class="badge">Recommendation Systems</span>
+<!-- ── PROFILE (above fold) ── -->
+<div style="padding-top:64px;" id="about">
+  <div class="profile-section">
+
+    <!-- LEFT: identity + bio + stats -->
+    <div class="profile-left">
+      <div class="profile-identity">
+        <div class="profile-photo-sm">
+          <img src="img/myphoto.JPG" alt="Emrul Hasan">
+        </div>
+        <div class="profile-name-block">
+          <div class="profile-name">Emrul <span>Hasan</span></div>
+          <div class="profile-title">
+            <strong>Postdoctoral Research Fellow</strong> · UBC &amp; BC Cancer<br>
+            Agentic AI Technical Specialist · Vector Institute
+          </div>
+        </div>
       </div>
-      <div class="hero-cta">
+
+      <div class="profile-bio">
+        <p>
+          I am a <strong>Postdoctoral Research Fellow</strong> at the University of British
+          Columbia and BC Cancer, developing agentic AI systems for healthcare — including
+          conversational assistants for cancer patients and clinicians. My work centres on
+          <strong>design, evaluation, and reliability</strong> of large-scale agentic architectures
+          and RAG systems in high-stakes clinical settings.
+        </p>
+        <p>
+          As <strong>Agentic AI Technical Specialist at the Vector Institute</strong> (2+ years),
+          I have advised 10+ startups on production agentic AI — multi-hop RAG pipelines,
+          tool-augmented agents, and rigorous evaluation frameworks for reliability and
+          failure-mode analysis. At <strong>Amazon</strong>, I pioneered
+          <strong>LLM-as-Judge and LLM-as-Jury</strong> pipelines for RAG evaluation,
+          improving contact deflection by 2% and cutting manual review effort by four weeks.
+        </p>
+        <p>
+          I publish in <strong>ACM Computing Surveys</strong> (IF&nbsp;23.8), IEEE, and ACM RecSys.
+        </p>
+      </div>
+
+      <div class="profile-stats">
+        <div class="pstat">
+          <div class="pstat-num">10+</div>
+          <div class="pstat-desc">Start-ups consulted</div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-num">2+</div>
+          <div class="pstat-desc">Yrs at Vector Institute</div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-num">8+</div>
+          <div class="pstat-desc">Publications</div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-num">23.8</div>
+          <div class="pstat-desc">ACM Computing Surveys IF</div>
+        </div>
+      </div>
+
+      <div class="profile-cta">
         <a href="https://scholar.google.com/citations?user=ZZFYZT0AAAAJ&hl=en" target="_blank" class="btn btn-primary">Google Scholar</a>
         <a href="docs/myresume.pdf" target="_blank" class="btn btn-outline">Download CV</a>
         <a href="contact.html" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="img/myphoto.JPG" alt="Emrul Hasan">
+
+    <!-- RIGHT: research interests sidebar -->
+    <div class="profile-right">
+      <div class="interests-card">
+        <div class="interests-label">Research Interests</div>
+
+        <div class="interest-item">
+          <div class="interest-icon teal">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <div class="interest-name">Agentic AI</div>
+            <div class="interest-sub">LLM agents · evaluation · tool use</div>
+          </div>
+        </div>
+
+        <div class="interest-item">
+          <div class="interest-icon coral">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ff7a5c" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div>
+            <div class="interest-name">Recommendation Systems</div>
+            <div class="interest-sub">multi-criteria · explainability · NLP</div>
+          </div>
+        </div>
+
+        <div class="interest-item">
+          <div class="interest-icon blue">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3a9cfa" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div>
+            <div class="interest-name">NLP</div>
+            <div class="interest-sub">clinical text · transformers · generation</div>
+          </div>
+        </div>
+
+        <div class="interest-item">
+          <div class="interest-icon teal">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="interest-name">Evaluation &amp; Reliability</div>
+            <div class="interest-sub">LLM-as-Judge · RAG eval · safety</div>
+          </div>
+        </div>
+
+        <div class="sidebar-links">
+          <a href="https://scholar.google.com/citations?user=ZZFYZT0AAAAJ&hl=en" target="_blank" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Scholar
+          </a>
+          <a href="https://github.com/emrulhasan-nlp" target="_blank" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/emrulphy/" target="_blank" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:emrul.phy@gmail.com" class="sidebar-link">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="section-label">Profile</div>
-  <div class="section-title">About Me</div>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>
-        I am a <strong>Postdoctoral Research Fellow</strong> at the University of British
-        Columbia and BC Cancer, developing agentic AI systems for healthcare — including
-        conversational assistants for cancer patients and clinicians. My work centres on the
-        <strong>design, evaluation, and reliability</strong> of large-scale agentic architectures
-        and retrieval-augmented generation (RAG) systems in high-stakes clinical settings.
-      </p>
-      <p>
-        At <strong>Amazon</strong>, I built end-to-end automated evaluation frameworks for a
-        RAG-based customer chat assistant, pioneering <strong>LLM-as-Judge and LLM-as-Jury</strong>
-        pipelines that delivered scalable assessment of response faithfulness, task completion,
-        and conversational quality — reducing manual evaluation effort by four weeks and improving
-        contact deflection by 2%.
-      </p>
-      <p>
-        As <strong>Agentic AI Technical Specialist at the Vector Institute</strong>, I have
-        advised 10+ startups over two years on production agentic AI — spanning multi-hop RAG
-        pipelines, tool-augmented agents, and rigorous evaluation frameworks for reliability
-        and failure-mode analysis.
-      </p>
-      <p>
-        My research treats <strong>evaluation as an end-to-end pipeline property</strong>,
-        advancing principled and reproducible methods for agentic systems. I publish in
-        ACM Computing Surveys (IF&nbsp;23.8), IEEE, and ACM RecSys.
-      </p>
-    </div>
-    <div>
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-num">10+</div>
-          <div class="stat-desc">Start-ups consulted at Vector Institute</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">2+</div>
-          <div class="stat-desc">Years at Vector Institute</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">8+</div>
-          <div class="stat-desc">Peer-reviewed publications</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">23.8</div>
-          <div class="stat-desc">Impact factor — ACM Computing Surveys</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ── POSITIONS ── -->
-<section id="positions">
-  <div class="section-label">Experience</div>
-  <div class="section-title">Current &amp; Past Positions</div>
-  <div class="positions">
-
-    <div class="position-card current">
-      <div class="pos-dot"></div>
-      <div>
-        <div class="pos-header">
-          <div>
-            <div class="pos-title">Postdoctoral Research Fellow</div>
-            <div class="pos-org">University of British Columbia &amp; BC Cancer · Vancouver, BC</div>
-          </div>
-          <span class="pos-period now">Mar 2026 — Present</span>
-        </div>
-        <ul class="pos-bullets">
-          <li>Building an AI-powered chat assistant for cancer patients and clinicians, with focus on personalized resource navigation and clinical decision support</li>
-          <li>Designing and evaluating agentic AI systems for patient-facing and clinical workflows; leading evaluation framework design for safety, faithfulness, and reliability</li>
-          <li>Training novel models for depression prediction from clinical documents and EHRs</li>
-          <li>Supervising end-to-end AI and NLP projects on mental health — from data curation to model evaluation</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="position-card current">
-      <div class="pos-dot blue"></div>
-      <div>
-        <div class="pos-header">
-          <div>
-            <div class="pos-title">Agentic AI Technical Specialist</div>
-            <div class="pos-org">Vector Institute (Part-time Contract) · Toronto, ON</div>
-          </div>
-          <span class="pos-period now">Jan 2024 — Present · 2 yrs</span>
-        </div>
-        <ul class="pos-bullets">
-          <li>Provided technical consultation to 10+ start-up companies on agentic AI system design, evaluation, and production deployment</li>
-          <li>Developed RAG pipelines using embeddings, Elasticsearch, structured data, and web-based sources for diverse client use cases</li>
-          <li>Integrated LLM agents with external tools and APIs — search, databases, code execution, and retrieval — enabling grounded, action-oriented responses</li>
-          <li>Designed agent evaluation methods measuring task success, reasoning quality, latency, and failure modes in production settings</li>
-          <li>Mentored junior ML engineers; delivered weekly sessions on ReAct agents, LangFuse, and RAG evaluation</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="position-card">
-      <div class="pos-dot coral"></div>
-      <div>
-        <div class="pos-header">
-          <div>
-            <div class="pos-title">Applied Scientist II Intern</div>
-            <div class="pos-org">Amazon · Vancouver, BC</div>
-          </div>
-          <span class="pos-period">Jun 2025 — Sep 2025</span>
-        </div>
-        <ul class="pos-bullets">
-          <li>Developed an end-to-end automated evaluation framework for a RAG-based customer chat assistant, covering retrieval accuracy and generation quality at scale</li>
-          <li>Designed <strong style="color:var(--text-dim)">LLM-as-Judge and LLM-as-Jury</strong> pipelines for multi-turn dialogue evaluation — assessing faithfulness, task completion, and conversational quality using few-shot, zero-shot, and hybrid prompting</li>
-          <li>Evaluation insights improved contact deflection rate by 2% and reduced manual evaluation time by ~4 weeks</li>
-          <li>Contributed to an agentic assistant that auto-generates preparatory briefs for business leaders ahead of corporate meetings</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="position-card">
-      <div class="pos-dot muted"></div>
-      <div>
-        <div class="pos-header">
-          <div>
-            <div class="pos-title">Machine Learning Technical Specialist &amp; Applied ML Intern</div>
-            <div class="pos-org">Vector Institute · Toronto, ON</div>
-          </div>
-          <span class="pos-period">May 2024 — Apr 2025</span>
-        </div>
-        <ul class="pos-bullets">
-          <li>Supervised ML Associates on end-to-end AI application development across multiple start-ups (RAG, AI agents, probabilistic models)</li>
-          <li>Applied multimodal LLMs to create a novel bias-detection dataset; established responsible AI benchmarks</li>
-          <li>Delivered weekly hands-on training sessions on ReAct agents, LangFuse, and RAG systems</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="position-card">
-      <div class="pos-dot muted"></div>
-      <div>
-        <div class="pos-header">
-          <div>
-            <div class="pos-title">Research Assistant / Ph.D. Candidate</div>
-            <div class="pos-org">Toronto Metropolitan University · Toronto, ON</div>
-          </div>
-          <span class="pos-period">Jan 2021 — Jan 2026</span>
-        </div>
-        <ul class="pos-bullets">
-          <li>Designed advanced deep learning architectures for recommendation systems; developed multi-criteria recommendation frameworks</li>
-          <li>Fine-tuned transformer models (BERT) for fake news classification and NLP tasks</li>
-          <li>Prototyped generative AI applications integrating LLMs with structured evaluation frameworks</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ── RESEARCH ── -->
+<!-- ── RESEARCH THEMES ── -->
 <section id="research">
   <div class="section-label">Research</div>
   <div class="section-title">Research Themes</div>
@@ -256,19 +322,11 @@
     </div>
 
     <div class="research-card">
-      <div class="rc-icon blue">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9cfa" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
-      </div>
-      <div class="rc-title">Responsible AI</div>
-      <div class="rc-desc">Addressing bias, fairness, and accountability in AI systems through novel benchmarks, multimodal bias detection, and structured evaluation aligned with ethical deployment standards.</div>
-    </div>
-
-    <div class="research-card">
       <div class="rc-icon coral">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff7a5c" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
       </div>
       <div class="rc-title">Recommendation Systems</div>
-      <div class="rc-desc">Multi-criteria, review-based, and explainable recommendation using deep learning, contrastive learning, and NLP — with publications in top-tier venues including ACM Computing Surveys.</div>
+      <div class="rc-desc">Multi-criteria, review-based, and explainable recommendation using deep learning, contrastive learning, and NLP — with publications in ACM Computing Surveys (IF 23.8) and ACM RecSys.</div>
     </div>
 
   </div>
@@ -276,7 +334,7 @@
 
 <div class="divider"></div>
 
-<!-- ── PUBLICATIONS (selected) ── -->
+<!-- ── SELECTED PUBLICATIONS ── -->
 <section>
   <div class="section-label">Publications</div>
   <div class="section-title">Selected Publications</div>
