@@ -119,6 +119,9 @@
     }
     .sidebar-link:hover { border-color: var(--accent); color: var(--accent); }
 
+    .pub-title a { color: inherit; text-decoration: none; }
+    .pub-title a:hover { color: var(--accent); }
+
     /* Aurora background */
     .profile-aurora {
       position: relative;
@@ -251,7 +254,6 @@
             <div style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:0.45rem;">Agentic &amp; Evaluation</div>
             <div style="display:flex; flex-wrap:wrap; gap:0.35rem;">
               <span class="skill-tag">LLM-as-Judge</span>
-              <span class="skill-tag">LangFuse</span>
               <span class="skill-tag">ReAct Agents</span>
               <span class="skill-tag">RAG Evaluation</span>
               <span class="skill-tag">RAGAS</span>
@@ -274,6 +276,7 @@
               <span class="skill-tag">Contrastive Learning</span>
               <span class="skill-tag">Multimodal LLMs</span>
               <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Fine-Tuning</span>
             </div>
           </div>
         </div>
@@ -294,34 +297,18 @@
 
     <div class="research-card">
       <div class="rc-icon teal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       </div>
-      <div class="rc-title">Agentic System Evaluation</div>
-      <div class="rc-desc">Designing rigorous evaluation frameworks for LLM-based agents — measuring task success, reasoning quality, faithfulness, latency, and failure modes in research and production settings.</div>
+      <div class="rc-title">NLP &amp; GenAI</div>
+      <div class="rc-desc">Research on natural language processing and generative AI — including large language models, RAG systems, text understanding, clinical NLP, and conversational AI for cancer care and mental health.</div>
     </div>
 
     <div class="research-card">
       <div class="rc-icon blue">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9cfa" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9cfa" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       </div>
-      <div class="rc-title">LLM Reliability &amp; Safety</div>
-      <div class="rc-desc">Building trust in large language models through hallucination reduction, structured reasoning, and LLM-as-Judge methodologies for high-stakes clinical and enterprise deployments.</div>
-    </div>
-
-    <div class="research-card">
-      <div class="rc-icon coral">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff7a5c" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      </div>
-      <div class="rc-title">Clinical AI &amp; NLP</div>
-      <div class="rc-desc">Developing conversational AI for cancer care navigation, mental health assessment, and clinical decision support — with emphasis on responsible, patient-safe deployment.</div>
-    </div>
-
-    <div class="research-card">
-      <div class="rc-icon teal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      </div>
-      <div class="rc-title">RAG Systems</div>
-      <div class="rc-desc">Designing and evaluating retrieval-augmented generation pipelines across structured, unstructured, and web-based sources — optimising for accuracy, grounding, and production readiness.</div>
+      <div class="rc-title">Agentic AI and Evaluation</div>
+      <div class="rc-desc">Designing and evaluating LLM-based agentic architectures — multi-hop RAG pipelines, tool-augmented agents, LLM-as-Judge/Jury frameworks, and rigorous evaluation for production and clinical settings.</div>
     </div>
 
     <div class="research-card">
@@ -330,6 +317,14 @@
       </div>
       <div class="rc-title">Recommendation Systems</div>
       <div class="rc-desc">Multi-criteria, review-based, and explainable recommendation using deep learning, contrastive learning, and NLP — with publications in ACM Computing Surveys (IF 23.8) and ACM RecSys.</div>
+    </div>
+
+    <div class="research-card">
+      <div class="rc-icon teal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4af0b0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="rc-title">Trustworthy and Reliable AI</div>
+      <div class="rc-desc">Building trust in AI through hallucination reduction, fairness, bias detection in multimodal content, and responsible deployment — with emphasis on accountability in high-stakes clinical and enterprise settings.</div>
     </div>
 
   </div>
@@ -354,7 +349,7 @@
     <div class="pub-item">
       <div class="pub-year">2024</div>
       <div>
-        <div class="pub-title">Review-Based Recommendation Systems: A Survey of Approaches, Challenges and Future Perspectives <span class="pub-badge">IF 23.8</span></div>
+        <div class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3742421" target="_blank" style="color:inherit;text-decoration:none;">Review-Based Recommendation Systems: A Survey of Approaches, Challenges and Future Perspectives</a> <span class="pub-badge">IF 23.8</span></div>
         <div class="pub-venue">ACM Computing Surveys · Ranked 1/143 in CS Theory &amp; Methods</div>
       </div>
     </div>
@@ -362,7 +357,7 @@
     <div class="pub-item">
       <div class="pub-year">2024</div>
       <div>
-        <div class="pub-title">Accommodation Review Ranking for Tourism Recommendation <span class="pub-badge blue">2nd Place</span></div>
+        <div class="pub-title"><a href="https://ceur-ws.org/Vol-3886/challenge3.pdf" target="_blank" style="color:inherit;text-decoration:none;">Accommodation Review Ranking for Tourism Recommendation</a> <span class="pub-badge blue">2nd Place</span></div>
         <div class="pub-venue">RecTour 2024 Workshop @ ACM RecSys · Bari, Italy</div>
       </div>
     </div>
@@ -370,7 +365,7 @@
     <div class="pub-item">
       <div class="pub-year">2024</div>
       <div>
-        <div class="pub-title">ViLBias: A Framework for Bias Detection using Linguistic and Visual Cues</div>
+        <div class="pub-title"><a href="https://arxiv.org/abs/2412.17052" target="_blank" style="color:inherit;text-decoration:none;">ViLBias: A Framework for Bias Detection using Linguistic and Visual Cues</a></div>
         <div class="pub-venue">arXiv preprint · Raza, Saleh, Hasan et al.</div>
       </div>
     </div>
@@ -378,7 +373,7 @@
     <div class="pub-item">
       <div class="pub-year">2022</div>
       <div>
-        <div class="pub-title">Multicriteria Rating and Review-Based Recommendation Model</div>
+        <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10020741/" target="_blank" style="color:inherit;text-decoration:none;">Multicriteria Rating and Review-Based Recommendation Model</a></div>
         <div class="pub-venue">IEEE International Conference on Big Data</div>
       </div>
     </div>
